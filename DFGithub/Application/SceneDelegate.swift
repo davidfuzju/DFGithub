@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Toast_Swift
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -17,6 +19,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let libsManager = LibsManager.shared
+        libsManager.setupLibs()
+
+        if Configs.Network.useStaging == true {
+            // Logout
+            User.removeCurrentUser()
+            AuthManager.removeToken()
+
+            // Use Green Dark theme
+            var theme = ThemeType.currentTheme()
+            if theme.isDark != true {
+                theme = theme.toggled()
+            }
+            theme = theme.withColor(color: .green)
+            themeService.switch(theme)
+        } else {
+            connectedToInternet().skip(1).subscribe(onNext: { [weak self] (connected) in
+                var style = ToastManager.shared.style
+                style.backgroundColor = connected ? UIColor.Material.green: UIColor.Material.red
+                let message = connected ? R.string.localizable.toastConnectionBackMessage.key.localized(): R.string.localizable.toastConnectionLostMessage.key.localized()
+                let image = connected ? R.image.icon_toast_success(): R.image.icon_toast_warning()
+                if let view = self?.window?.rootViewController?.view {
+                    view.makeToast(message, position: .bottom, image: image, style: style)
+                }
+            }).disposed(by: rx.disposeBag)
+        }
+
+        // Show initial screen
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        Application.shared.presentInitialScreen(in: window)
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

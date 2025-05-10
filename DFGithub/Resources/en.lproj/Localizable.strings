@@ -1,0 +1,93 @@
+/* 
+  Localizable.strings
+  DFGithub
+
+  Created by David FU on 2025/5/10.
+  
+*/
+
+/* Common */
+"Common.OK" = "OK";
+"Common.Cancel" = "Cancel";
+"Common.Back" = "Back";
+"Common.Close" = "Close";
+"Common.Next" = "Next";
+"Common.Save" = "Save";
+"Common.Delete" = "Delete";
+"Common.Search" = "Search";
+"Common.NoResults" = "No Results";
+
+/* Toast */
+"Toast.ConnectionBack.Message" = "Back online";
+"Toast.ConnectionLost.Message" = "No connection";
+
+/* Home TabBar */
+"Home.TabBar.Search.Title" = "Search";
+"Home.TabBar.Login.Title" = "Login";
+"Home.TabBar.Settings.Title" = "Settings";
+
+/* Initial */
+"Initial.NoResults" = "Welcome to DFGithub!";
+
+/* Login */
+"Login.BasicSegment.Title" = "Basic";
+"Login.PersonalSegment.Title" = "Personal";
+"Login.OAuthSegment.Title" = "OAuth";
+"Login.TitleLabel.Text" = "Welcome to DFGithub";
+"Login.DetailLabel.Text" = "For API requests using OAuth, you can make up to 5000 requests per hour. \n\nFor unauthenticated requests, the rate limit allows for up to 60 requests per hour.";
+"Login.OAuthloginButton.Title" = "Sign in with Github";
+
+/* Search */
+"Search.SearchBar.Placeholder" = "Global Search";
+"Search.RepositoriesSegment.Title" = "Repositories";
+"Search.UsersSegment.Title" = "Users";
+"Search.DailySegment.Title" = "Daily";
+"Search.WeeklySegment.Title" = "Weekly";
+"Search.MonthlySegment.Title" = "Monthly";
+"Search.TrendingSegment.Title" = "Trending";
+"Search.SearchSegment.Title" = "Search";
+"Search.TrendingSection.Title" = "Trending";
+"Search.TrendingSectionWithLanguage.Title" = "Trending results for %@";
+"Search.SearchSection.Title" = "Search";
+"Search.SearchSectionWithLanguage.Title" = "Search results for %@";
+"Search.RepositoriesTotalCount.Title" = "%@ repositories";
+"Search.UsersTotalCount.Title" = "%@ users";
+"Search.SortRepositories.BestMatch.Title" = "Best match";
+"Search.SortRepositories.MostStars.Title" = "Most stars";
+"Search.SortRepositories.FewestStars.Title" = "Fewest stars";
+"Search.SortRepositories.MostForks.Title" = "Most forks";
+"Search.SortRepositories.FewestForks.Title" = "Fewest forks";
+"Search.SortRepositories.RecentlyUpdated.Title" = "Recently updated";
+"Search.SortRepositories.LastRecentlyUpdated.Title" = "Last recently updated";
+"Search.SortUsers.BestMatch.Title" = "Best match";
+"Search.SortUsers.MostFollowers.Title" = "Most followers";
+"Search.SortUsers.FewestFollowers.Title" = "Fewest followers";
+"Search.SortUsers.MostRecentlyJoined.Title" = "Most recently joined";
+"Search.SortUsers.LeastRecentlyJoined.Title" = "Least recently joined";
+"Search.SortUsers.MostRepositories.Title" = "Most repositories";
+"Search.SortUsers.FewestRepositories.Title" = "Fewest repositories";
+
+/* Settings */
+"Settings.Navigation.Title" = "Settings";
+"Settings.AccountSection.Title" = "Account";
+"Settings.PreferencesSection.Title" = "Preferences";
+"Settings.NightMode.Title" = "Night mode";
+"Settings.Language.Title" = "Language";
+"Settings.LogOut.Title" = "Log Out";
+"Settings.Logout.Alert.Message" = "Are you sure want to log out from DFGithub?";
+"Settings.Logout.Alert.ConfirmButton.Title" = "Logout";
+
+/* Language */
+"Language.Navigation.Title" = "Language";
+
+/* User Details */
+"User.RepositoriesButton.Title" = "Repositories";
+"User.FollowersButton.Title" = "Followers";
+"User.FollowingButton.Title" = "Following";
+"User.CreatedCell.Title" = "Created";
+"User.UpdatedCell.Title" = "Updated";
+"User.StarsCell.Title" = "Stars";
+"User.WatchingCell.Title" = "Watching";
+"User.CompanyCell.Title" = "Company";
+"User.BlogCell.Title" = "Blog";
+"User.ProfileSummaryCell.Title" = "Profile Summary";

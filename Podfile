@@ -24,9 +24,10 @@ target 'DFGithub' do
   pod 'RxViewController', '~> 2.0'
   pod 'RxGesture', '~> 4.0'
   pod 'RxOptional', '~> 5.0'
+  pod 'RxTheme', '~> 6.0'
   
   # Networking
-  pod 'Kingfisher', '~> 8.0.0'
+  pod 'Kingfisher', '~> 7.12.0'
   pod 'Moya/RxSwift', '~> 15.0'
   
   # Keychain
@@ -44,10 +45,20 @@ target 'DFGithub' do
   
   # UIKit
   pod 'DZNEmptyDataSet'
-  pod "Hero"
+  pod "MBProgressHUD"
+  pod "KafkaRefresh"
+  pod 'BonMot', '~> 6.0'
+  pod 'Toast-Swift', '~> 5.0'
+  pod 'HMSegmentedControl', '~> 1.0'
+  pod 'DropDown', '~> 2.0'
   
   # Auto Layout
   pod 'SnapKit', '~> 5.0'
+  
+  #
+  pod 'SwiftDate', '~> 7.0'
+  
+  pod 'Localize-Swift', '~> 3.2'
   
   # Logging
   pod 'CocoaLumberjack/Swift', '~> 3.0'

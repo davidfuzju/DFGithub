@@ -11,17 +11,27 @@ let R = _R(bundle: Bundle(for: BundleFinder.self))
 
 struct _R {
   let bundle: Foundation.Bundle
+  var string: string { .init(bundle: bundle, preferredLanguages: nil, locale: nil) }
   var color: color { .init(bundle: bundle) }
+  var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
-  var file: file { .init(bundle: bundle) }
 
+  func string(bundle: Foundation.Bundle) -> string {
+    .init(bundle: bundle, preferredLanguages: nil, locale: nil)
+  }
+  func string(locale: Foundation.Locale) -> string {
+    .init(bundle: bundle, preferredLanguages: nil, locale: locale)
+  }
+  func string(preferredLanguages: [String], locale: Locale? = nil) -> string {
+    .init(bundle: bundle, preferredLanguages: preferredLanguages, locale: locale)
+  }
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
-  func info(bundle: Foundation.Bundle) -> info {
+  func image(bundle: Foundation.Bundle) -> image {
     .init(bundle: bundle)
   }
-  func file(bundle: Foundation.Bundle) -> file {
+  func info(bundle: Foundation.Bundle) -> info {
     .init(bundle: bundle)
   }
   func validate() throws {
@@ -32,12 +42,748 @@ struct _R {
     let developmentRegion = "en"
   }
 
+  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    let bundle: Foundation.Bundle
+    let preferredLanguages: [String]?
+    let locale: Locale?
+    var localizable: localizable { .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale)) }
+
+    func localizable(preferredLanguages: [String]) -> localizable {
+      .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale))
+    }
+
+
+    /// This `_R.string.localizable` struct is generated, and contains static references to 68 localization keys.
+    struct localizable {
+      let source: RswiftResources.StringResource.Source
+
+      /// en translation: Back
+      ///
+      /// Key: Common.Back
+      ///
+      /// Locales: en, zh-Hans
+      var commonBack: RswiftResources.StringResource { .init(key: "Common.Back", tableName: "Localizable", source: source, developmentValue: "Back", comment: nil) }
+
+      /// en translation: Cancel
+      ///
+      /// Key: Common.Cancel
+      ///
+      /// Locales: en, zh-Hans
+      var commonCancel: RswiftResources.StringResource { .init(key: "Common.Cancel", tableName: "Localizable", source: source, developmentValue: "Cancel", comment: nil) }
+
+      /// en translation: Close
+      ///
+      /// Key: Common.Close
+      ///
+      /// Locales: en, zh-Hans
+      var commonClose: RswiftResources.StringResource { .init(key: "Common.Close", tableName: "Localizable", source: source, developmentValue: "Close", comment: nil) }
+
+      /// en translation: Delete
+      ///
+      /// Key: Common.Delete
+      ///
+      /// Locales: en, zh-Hans
+      var commonDelete: RswiftResources.StringResource { .init(key: "Common.Delete", tableName: "Localizable", source: source, developmentValue: "Delete", comment: nil) }
+
+      /// en translation: Next
+      ///
+      /// Key: Common.Next
+      ///
+      /// Locales: en, zh-Hans
+      var commonNext: RswiftResources.StringResource { .init(key: "Common.Next", tableName: "Localizable", source: source, developmentValue: "Next", comment: nil) }
+
+      /// en translation: No Results
+      ///
+      /// Key: Common.NoResults
+      ///
+      /// Locales: en, zh-Hans
+      var commonNoResults: RswiftResources.StringResource { .init(key: "Common.NoResults", tableName: "Localizable", source: source, developmentValue: "No Results", comment: nil) }
+
+      /// en translation: OK
+      ///
+      /// Key: Common.OK
+      ///
+      /// Locales: en, zh-Hans
+      var commonOK: RswiftResources.StringResource { .init(key: "Common.OK", tableName: "Localizable", source: source, developmentValue: "OK", comment: nil) }
+
+      /// en translation: Save
+      ///
+      /// Key: Common.Save
+      ///
+      /// Locales: en, zh-Hans
+      var commonSave: RswiftResources.StringResource { .init(key: "Common.Save", tableName: "Localizable", source: source, developmentValue: "Save", comment: nil) }
+
+      /// en translation: Search
+      ///
+      /// Key: Common.Search
+      ///
+      /// Locales: en, zh-Hans
+      var commonSearch: RswiftResources.StringResource { .init(key: "Common.Search", tableName: "Localizable", source: source, developmentValue: "Search", comment: nil) }
+
+      /// en translation: Login
+      ///
+      /// Key: Home.TabBar.Login.Title
+      ///
+      /// Locales: en, zh-Hans
+      var homeTabBarLoginTitle: RswiftResources.StringResource { .init(key: "Home.TabBar.Login.Title", tableName: "Localizable", source: source, developmentValue: "Login", comment: nil) }
+
+      /// en translation: Search
+      ///
+      /// Key: Home.TabBar.Search.Title
+      ///
+      /// Locales: en, zh-Hans
+      var homeTabBarSearchTitle: RswiftResources.StringResource { .init(key: "Home.TabBar.Search.Title", tableName: "Localizable", source: source, developmentValue: "Search", comment: nil) }
+
+      /// en translation: Settings
+      ///
+      /// Key: Home.TabBar.Settings.Title
+      ///
+      /// Locales: en, zh-Hans
+      var homeTabBarSettingsTitle: RswiftResources.StringResource { .init(key: "Home.TabBar.Settings.Title", tableName: "Localizable", source: source, developmentValue: "Settings", comment: nil) }
+
+      /// en translation: Welcome to DFGithub!
+      ///
+      /// Key: Initial.NoResults
+      ///
+      /// Locales: en, zh-Hans
+      var initialNoResults: RswiftResources.StringResource { .init(key: "Initial.NoResults", tableName: "Localizable", source: source, developmentValue: "Welcome to DFGithub!", comment: nil) }
+
+      /// en translation: Language
+      ///
+      /// Key: Language.Navigation.Title
+      ///
+      /// Locales: en, zh-Hans
+      var languageNavigationTitle: RswiftResources.StringResource { .init(key: "Language.Navigation.Title", tableName: "Localizable", source: source, developmentValue: "Language", comment: nil) }
+
+      /// en translation: Basic
+      ///
+      /// Key: Login.BasicSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var loginBasicSegmentTitle: RswiftResources.StringResource { .init(key: "Login.BasicSegment.Title", tableName: "Localizable", source: source, developmentValue: "Basic", comment: nil) }
+
+      /// en translation: For API requests using OAuth, you can make up to 5000 requests per hour.   For unauthenticated requests, the rate limit allows for up to 60 requests per hour.
+      ///
+      /// Key: Login.DetailLabel.Text
+      ///
+      /// Locales: en, zh-Hans
+      var loginDetailLabelText: RswiftResources.StringResource { .init(key: "Login.DetailLabel.Text", tableName: "Localizable", source: source, developmentValue: "For API requests using OAuth, you can make up to 5000 requests per hour. \n\nFor unauthenticated requests, the rate limit allows for up to 60 requests per hour.", comment: nil) }
+
+      /// en translation: OAuth
+      ///
+      /// Key: Login.OAuthSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var loginOAuthSegmentTitle: RswiftResources.StringResource { .init(key: "Login.OAuthSegment.Title", tableName: "Localizable", source: source, developmentValue: "OAuth", comment: nil) }
+
+      /// en translation: Sign in with Github
+      ///
+      /// Key: Login.OAuthloginButton.Title
+      ///
+      /// Locales: en, zh-Hans
+      var loginOAuthloginButtonTitle: RswiftResources.StringResource { .init(key: "Login.OAuthloginButton.Title", tableName: "Localizable", source: source, developmentValue: "Sign in with Github", comment: nil) }
+
+      /// en translation: Personal
+      ///
+      /// Key: Login.PersonalSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var loginPersonalSegmentTitle: RswiftResources.StringResource { .init(key: "Login.PersonalSegment.Title", tableName: "Localizable", source: source, developmentValue: "Personal", comment: nil) }
+
+      /// en translation: Welcome to DFGithub
+      ///
+      /// Key: Login.TitleLabel.Text
+      ///
+      /// Locales: en, zh-Hans
+      var loginTitleLabelText: RswiftResources.StringResource { .init(key: "Login.TitleLabel.Text", tableName: "Localizable", source: source, developmentValue: "Welcome to DFGithub", comment: nil) }
+
+      /// en translation: Daily
+      ///
+      /// Key: Search.DailySegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchDailySegmentTitle: RswiftResources.StringResource { .init(key: "Search.DailySegment.Title", tableName: "Localizable", source: source, developmentValue: "Daily", comment: nil) }
+
+      /// en translation: Monthly
+      ///
+      /// Key: Search.MonthlySegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchMonthlySegmentTitle: RswiftResources.StringResource { .init(key: "Search.MonthlySegment.Title", tableName: "Localizable", source: source, developmentValue: "Monthly", comment: nil) }
+
+      /// en translation: Repositories
+      ///
+      /// Key: Search.RepositoriesSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchRepositoriesSegmentTitle: RswiftResources.StringResource { .init(key: "Search.RepositoriesSegment.Title", tableName: "Localizable", source: source, developmentValue: "Repositories", comment: nil) }
+
+      /// en translation: %@ repositories
+      ///
+      /// Key: Search.RepositoriesTotalCount.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchRepositoriesTotalCountTitle: RswiftResources.StringResource1<String> { .init(key: "Search.RepositoriesTotalCount.Title", tableName: "Localizable", source: source, developmentValue: "%@ repositories", comment: nil) }
+
+      /// en translation: Global Search
+      ///
+      /// Key: Search.SearchBar.Placeholder
+      ///
+      /// Locales: en, zh-Hans
+      var searchSearchBarPlaceholder: RswiftResources.StringResource { .init(key: "Search.SearchBar.Placeholder", tableName: "Localizable", source: source, developmentValue: "Global Search", comment: nil) }
+
+      /// en translation: Search
+      ///
+      /// Key: Search.SearchSection.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSearchSectionTitle: RswiftResources.StringResource { .init(key: "Search.SearchSection.Title", tableName: "Localizable", source: source, developmentValue: "Search", comment: nil) }
+
+      /// en translation: Search results for %@
+      ///
+      /// Key: Search.SearchSectionWithLanguage.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSearchSectionWithLanguageTitle: RswiftResources.StringResource1<String> { .init(key: "Search.SearchSectionWithLanguage.Title", tableName: "Localizable", source: source, developmentValue: "Search results for %@", comment: nil) }
+
+      /// en translation: Search
+      ///
+      /// Key: Search.SearchSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSearchSegmentTitle: RswiftResources.StringResource { .init(key: "Search.SearchSegment.Title", tableName: "Localizable", source: source, developmentValue: "Search", comment: nil) }
+
+      /// en translation: Best match
+      ///
+      /// Key: Search.SortRepositories.BestMatch.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesBestMatchTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.BestMatch.Title", tableName: "Localizable", source: source, developmentValue: "Best match", comment: nil) }
+
+      /// en translation: Fewest forks
+      ///
+      /// Key: Search.SortRepositories.FewestForks.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesFewestForksTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.FewestForks.Title", tableName: "Localizable", source: source, developmentValue: "Fewest forks", comment: nil) }
+
+      /// en translation: Fewest stars
+      ///
+      /// Key: Search.SortRepositories.FewestStars.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesFewestStarsTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.FewestStars.Title", tableName: "Localizable", source: source, developmentValue: "Fewest stars", comment: nil) }
+
+      /// en translation: Last recently updated
+      ///
+      /// Key: Search.SortRepositories.LastRecentlyUpdated.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesLastRecentlyUpdatedTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.LastRecentlyUpdated.Title", tableName: "Localizable", source: source, developmentValue: "Last recently updated", comment: nil) }
+
+      /// en translation: Most forks
+      ///
+      /// Key: Search.SortRepositories.MostForks.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesMostForksTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.MostForks.Title", tableName: "Localizable", source: source, developmentValue: "Most forks", comment: nil) }
+
+      /// en translation: Most stars
+      ///
+      /// Key: Search.SortRepositories.MostStars.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesMostStarsTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.MostStars.Title", tableName: "Localizable", source: source, developmentValue: "Most stars", comment: nil) }
+
+      /// en translation: Recently updated
+      ///
+      /// Key: Search.SortRepositories.RecentlyUpdated.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortRepositoriesRecentlyUpdatedTitle: RswiftResources.StringResource { .init(key: "Search.SortRepositories.RecentlyUpdated.Title", tableName: "Localizable", source: source, developmentValue: "Recently updated", comment: nil) }
+
+      /// en translation: Best match
+      ///
+      /// Key: Search.SortUsers.BestMatch.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersBestMatchTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.BestMatch.Title", tableName: "Localizable", source: source, developmentValue: "Best match", comment: nil) }
+
+      /// en translation: Fewest followers
+      ///
+      /// Key: Search.SortUsers.FewestFollowers.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersFewestFollowersTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.FewestFollowers.Title", tableName: "Localizable", source: source, developmentValue: "Fewest followers", comment: nil) }
+
+      /// en translation: Fewest repositories
+      ///
+      /// Key: Search.SortUsers.FewestRepositories.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersFewestRepositoriesTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.FewestRepositories.Title", tableName: "Localizable", source: source, developmentValue: "Fewest repositories", comment: nil) }
+
+      /// en translation: Least recently joined
+      ///
+      /// Key: Search.SortUsers.LeastRecentlyJoined.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersLeastRecentlyJoinedTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.LeastRecentlyJoined.Title", tableName: "Localizable", source: source, developmentValue: "Least recently joined", comment: nil) }
+
+      /// en translation: Most followers
+      ///
+      /// Key: Search.SortUsers.MostFollowers.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersMostFollowersTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.MostFollowers.Title", tableName: "Localizable", source: source, developmentValue: "Most followers", comment: nil) }
+
+      /// en translation: Most recently joined
+      ///
+      /// Key: Search.SortUsers.MostRecentlyJoined.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersMostRecentlyJoinedTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.MostRecentlyJoined.Title", tableName: "Localizable", source: source, developmentValue: "Most recently joined", comment: nil) }
+
+      /// en translation: Most repositories
+      ///
+      /// Key: Search.SortUsers.MostRepositories.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchSortUsersMostRepositoriesTitle: RswiftResources.StringResource { .init(key: "Search.SortUsers.MostRepositories.Title", tableName: "Localizable", source: source, developmentValue: "Most repositories", comment: nil) }
+
+      /// en translation: Trending
+      ///
+      /// Key: Search.TrendingSection.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchTrendingSectionTitle: RswiftResources.StringResource { .init(key: "Search.TrendingSection.Title", tableName: "Localizable", source: source, developmentValue: "Trending", comment: nil) }
+
+      /// en translation: Trending results for %@
+      ///
+      /// Key: Search.TrendingSectionWithLanguage.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchTrendingSectionWithLanguageTitle: RswiftResources.StringResource1<String> { .init(key: "Search.TrendingSectionWithLanguage.Title", tableName: "Localizable", source: source, developmentValue: "Trending results for %@", comment: nil) }
+
+      /// en translation: Trending
+      ///
+      /// Key: Search.TrendingSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchTrendingSegmentTitle: RswiftResources.StringResource { .init(key: "Search.TrendingSegment.Title", tableName: "Localizable", source: source, developmentValue: "Trending", comment: nil) }
+
+      /// en translation: Users
+      ///
+      /// Key: Search.UsersSegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchUsersSegmentTitle: RswiftResources.StringResource { .init(key: "Search.UsersSegment.Title", tableName: "Localizable", source: source, developmentValue: "Users", comment: nil) }
+
+      /// en translation: %@ users
+      ///
+      /// Key: Search.UsersTotalCount.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchUsersTotalCountTitle: RswiftResources.StringResource1<String> { .init(key: "Search.UsersTotalCount.Title", tableName: "Localizable", source: source, developmentValue: "%@ users", comment: nil) }
+
+      /// en translation: Weekly
+      ///
+      /// Key: Search.WeeklySegment.Title
+      ///
+      /// Locales: en, zh-Hans
+      var searchWeeklySegmentTitle: RswiftResources.StringResource { .init(key: "Search.WeeklySegment.Title", tableName: "Localizable", source: source, developmentValue: "Weekly", comment: nil) }
+
+      /// en translation: Account
+      ///
+      /// Key: Settings.AccountSection.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsAccountSectionTitle: RswiftResources.StringResource { .init(key: "Settings.AccountSection.Title", tableName: "Localizable", source: source, developmentValue: "Account", comment: nil) }
+
+      /// en translation: Language
+      ///
+      /// Key: Settings.Language.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsLanguageTitle: RswiftResources.StringResource { .init(key: "Settings.Language.Title", tableName: "Localizable", source: source, developmentValue: "Language", comment: nil) }
+
+      /// en translation: Log Out
+      ///
+      /// Key: Settings.LogOut.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsLogOutTitle: RswiftResources.StringResource { .init(key: "Settings.LogOut.Title", tableName: "Localizable", source: source, developmentValue: "Log Out", comment: nil) }
+
+      /// en translation: Logout
+      ///
+      /// Key: Settings.Logout.Alert.ConfirmButton.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsLogoutAlertConfirmButtonTitle: RswiftResources.StringResource { .init(key: "Settings.Logout.Alert.ConfirmButton.Title", tableName: "Localizable", source: source, developmentValue: "Logout", comment: nil) }
+
+      /// en translation: Are you sure want to log out from DFGithub?
+      ///
+      /// Key: Settings.Logout.Alert.Message
+      ///
+      /// Locales: en, zh-Hans
+      var settingsLogoutAlertMessage: RswiftResources.StringResource { .init(key: "Settings.Logout.Alert.Message", tableName: "Localizable", source: source, developmentValue: "Are you sure want to log out from DFGithub?", comment: nil) }
+
+      /// en translation: Settings
+      ///
+      /// Key: Settings.Navigation.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsNavigationTitle: RswiftResources.StringResource { .init(key: "Settings.Navigation.Title", tableName: "Localizable", source: source, developmentValue: "Settings", comment: nil) }
+
+      /// en translation: Night mode
+      ///
+      /// Key: Settings.NightMode.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsNightModeTitle: RswiftResources.StringResource { .init(key: "Settings.NightMode.Title", tableName: "Localizable", source: source, developmentValue: "Night mode", comment: nil) }
+
+      /// en translation: Preferences
+      ///
+      /// Key: Settings.PreferencesSection.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsPreferencesSectionTitle: RswiftResources.StringResource { .init(key: "Settings.PreferencesSection.Title", tableName: "Localizable", source: source, developmentValue: "Preferences", comment: nil) }
+
+      /// en translation: Back online
+      ///
+      /// Key: Toast.ConnectionBack.Message
+      ///
+      /// Locales: en, zh-Hans
+      var toastConnectionBackMessage: RswiftResources.StringResource { .init(key: "Toast.ConnectionBack.Message", tableName: "Localizable", source: source, developmentValue: "Back online", comment: nil) }
+
+      /// en translation: No connection
+      ///
+      /// Key: Toast.ConnectionLost.Message
+      ///
+      /// Locales: en, zh-Hans
+      var toastConnectionLostMessage: RswiftResources.StringResource { .init(key: "Toast.ConnectionLost.Message", tableName: "Localizable", source: source, developmentValue: "No connection", comment: nil) }
+
+      /// en translation: Blog
+      ///
+      /// Key: User.BlogCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userBlogCellTitle: RswiftResources.StringResource { .init(key: "User.BlogCell.Title", tableName: "Localizable", source: source, developmentValue: "Blog", comment: nil) }
+
+      /// en translation: Company
+      ///
+      /// Key: User.CompanyCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userCompanyCellTitle: RswiftResources.StringResource { .init(key: "User.CompanyCell.Title", tableName: "Localizable", source: source, developmentValue: "Company", comment: nil) }
+
+      /// en translation: Created
+      ///
+      /// Key: User.CreatedCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userCreatedCellTitle: RswiftResources.StringResource { .init(key: "User.CreatedCell.Title", tableName: "Localizable", source: source, developmentValue: "Created", comment: nil) }
+
+      /// en translation: Followers
+      ///
+      /// Key: User.FollowersButton.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userFollowersButtonTitle: RswiftResources.StringResource { .init(key: "User.FollowersButton.Title", tableName: "Localizable", source: source, developmentValue: "Followers", comment: nil) }
+
+      /// en translation: Following
+      ///
+      /// Key: User.FollowingButton.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userFollowingButtonTitle: RswiftResources.StringResource { .init(key: "User.FollowingButton.Title", tableName: "Localizable", source: source, developmentValue: "Following", comment: nil) }
+
+      /// en translation: Profile Summary
+      ///
+      /// Key: User.ProfileSummaryCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userProfileSummaryCellTitle: RswiftResources.StringResource { .init(key: "User.ProfileSummaryCell.Title", tableName: "Localizable", source: source, developmentValue: "Profile Summary", comment: nil) }
+
+      /// en translation: Repositories
+      ///
+      /// Key: User.RepositoriesButton.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userRepositoriesButtonTitle: RswiftResources.StringResource { .init(key: "User.RepositoriesButton.Title", tableName: "Localizable", source: source, developmentValue: "Repositories", comment: nil) }
+
+      /// en translation: Stars
+      ///
+      /// Key: User.StarsCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userStarsCellTitle: RswiftResources.StringResource { .init(key: "User.StarsCell.Title", tableName: "Localizable", source: source, developmentValue: "Stars", comment: nil) }
+
+      /// en translation: Updated
+      ///
+      /// Key: User.UpdatedCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userUpdatedCellTitle: RswiftResources.StringResource { .init(key: "User.UpdatedCell.Title", tableName: "Localizable", source: source, developmentValue: "Updated", comment: nil) }
+
+      /// en translation: Watching
+      ///
+      /// Key: User.WatchingCell.Title
+      ///
+      /// Locales: en, zh-Hans
+      var userWatchingCellTitle: RswiftResources.StringResource { .init(key: "User.WatchingCell.Title", tableName: "Localizable", source: source, developmentValue: "Watching", comment: nil) }
+    }
+  }
+
   /// This `_R.color` struct is generated, and contains static references to 1 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+  }
+
+  /// This `_R.image` struct is generated, and contains static references to 79 images.
+  struct image {
+    let bundle: Foundation.Bundle
+
+    /// Image `icon_button_github`.
+    var icon_button_github: RswiftResources.ImageResource { .init(name: "icon_button_github", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_button_star`.
+    var icon_button_star: RswiftResources.ImageResource { .init(name: "icon_button_star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_button_unstar`.
+    var icon_button_unstar: RswiftResources.ImageResource { .init(name: "icon_button_unstar", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_button_user_plus`.
+    var icon_button_user_plus: RswiftResources.ImageResource { .init(name: "icon_button_user_plus", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_button_user_x`.
+    var icon_button_user_x: RswiftResources.ImageResource { .init(name: "icon_button_user_x", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_acknowledgements`.
+    var icon_cell_acknowledgements: RswiftResources.ImageResource { .init(name: "icon_cell_acknowledgements", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_branch`.
+    var icon_cell_badge_branch: RswiftResources.ImageResource { .init(name: "icon_cell_badge_branch", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_collaborator`.
+    var icon_cell_badge_collaborator: RswiftResources.ImageResource { .init(name: "icon_cell_badge_collaborator", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_comment`.
+    var icon_cell_badge_comment: RswiftResources.ImageResource { .init(name: "icon_cell_badge_comment", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_commit`.
+    var icon_cell_badge_commit: RswiftResources.ImageResource { .init(name: "icon_cell_badge_commit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_fork`.
+    var icon_cell_badge_fork: RswiftResources.ImageResource { .init(name: "icon_cell_badge_fork", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_issue`.
+    var icon_cell_badge_issue: RswiftResources.ImageResource { .init(name: "icon_cell_badge_issue", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_pull_request`.
+    var icon_cell_badge_pull_request: RswiftResources.ImageResource { .init(name: "icon_cell_badge_pull_request", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_push`.
+    var icon_cell_badge_push: RswiftResources.ImageResource { .init(name: "icon_cell_badge_push", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_repository`.
+    var icon_cell_badge_repository: RswiftResources.ImageResource { .init(name: "icon_cell_badge_repository", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_search`.
+    var icon_cell_badge_search: RswiftResources.ImageResource { .init(name: "icon_cell_badge_search", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_star`.
+    var icon_cell_badge_star: RswiftResources.ImageResource { .init(name: "icon_cell_badge_star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_tag`.
+    var icon_cell_badge_tag: RswiftResources.ImageResource { .init(name: "icon_cell_badge_tag", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_trending`.
+    var icon_cell_badge_trending: RswiftResources.ImageResource { .init(name: "icon_cell_badge_trending", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_badge_user`.
+    var icon_cell_badge_user: RswiftResources.ImageResource { .init(name: "icon_cell_badge_user", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_check`.
+    var icon_cell_check: RswiftResources.ImageResource { .init(name: "icon_cell_check", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_cloc`.
+    var icon_cell_cloc: RswiftResources.ImageResource { .init(name: "icon_cell_cloc", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_company`.
+    var icon_cell_company: RswiftResources.ImageResource { .init(name: "icon_cell_company", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_contact_no_image`.
+    var icon_cell_contact_no_image: RswiftResources.ImageResource { .init(name: "icon_cell_contact_no_image", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_created`.
+    var icon_cell_created: RswiftResources.ImageResource { .init(name: "icon_cell_created", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_dir`.
+    var icon_cell_dir: RswiftResources.ImageResource { .init(name: "icon_cell_dir", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_disclosure`.
+    var icon_cell_disclosure: RswiftResources.ImageResource { .init(name: "icon_cell_disclosure", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_events`.
+    var icon_cell_events: RswiftResources.ImageResource { .init(name: "icon_cell_events", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_file`.
+    var icon_cell_file: RswiftResources.ImageResource { .init(name: "icon_cell_file", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_frown`.
+    var icon_cell_frown: RswiftResources.ImageResource { .init(name: "icon_cell_frown", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_git_branch`.
+    var icon_cell_git_branch: RswiftResources.ImageResource { .init(name: "icon_cell_git_branch", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_git_commit`.
+    var icon_cell_git_commit: RswiftResources.ImageResource { .init(name: "icon_cell_git_commit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_git_fork`.
+    var icon_cell_git_fork: RswiftResources.ImageResource { .init(name: "icon_cell_git_fork", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_git_language`.
+    var icon_cell_git_language: RswiftResources.ImageResource { .init(name: "icon_cell_git_language", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_git_merge`.
+    var icon_cell_git_merge: RswiftResources.ImageResource { .init(name: "icon_cell_git_merge", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_git_pull_request`.
+    var icon_cell_git_pull_request: RswiftResources.ImageResource { .init(name: "icon_cell_git_pull_request", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_issues`.
+    var icon_cell_issues: RswiftResources.ImageResource { .init(name: "icon_cell_issues", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_language`.
+    var icon_cell_language: RswiftResources.ImageResource { .init(name: "icon_cell_language", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_link`.
+    var icon_cell_link: RswiftResources.ImageResource { .init(name: "icon_cell_link", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_logout`.
+    var icon_cell_logout: RswiftResources.ImageResource { .init(name: "icon_cell_logout", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_night_mode`.
+    var icon_cell_night_mode: RswiftResources.ImageResource { .init(name: "icon_cell_night_mode", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_profile_summary`.
+    var icon_cell_profile_summary: RswiftResources.ImageResource { .init(name: "icon_cell_profile_summary", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_readme`.
+    var icon_cell_readme: RswiftResources.ImageResource { .init(name: "icon_cell_readme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_releases`.
+    var icon_cell_releases: RswiftResources.ImageResource { .init(name: "icon_cell_releases", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_remove`.
+    var icon_cell_remove: RswiftResources.ImageResource { .init(name: "icon_cell_remove", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_size`.
+    var icon_cell_size: RswiftResources.ImageResource { .init(name: "icon_cell_size", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_smile`.
+    var icon_cell_smile: RswiftResources.ImageResource { .init(name: "icon_cell_smile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_source`.
+    var icon_cell_source: RswiftResources.ImageResource { .init(name: "icon_cell_source", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_star`.
+    var icon_cell_star: RswiftResources.ImageResource { .init(name: "icon_cell_star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_stars_history`.
+    var icon_cell_stars_history: RswiftResources.ImageResource { .init(name: "icon_cell_stars_history", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_submodule`.
+    var icon_cell_submodule: RswiftResources.ImageResource { .init(name: "icon_cell_submodule", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_theme`.
+    var icon_cell_theme: RswiftResources.ImageResource { .init(name: "icon_cell_theme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_updated`.
+    var icon_cell_updated: RswiftResources.ImageResource { .init(name: "icon_cell_updated", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_cell_whats_new`.
+    var icon_cell_whats_new: RswiftResources.ImageResource { .init(name: "icon_cell_whats_new", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_back`.
+    var icon_navigation_back: RswiftResources.ImageResource { .init(name: "icon_navigation_back", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_close`.
+    var icon_navigation_close: RswiftResources.ImageResource { .init(name: "icon_navigation_close", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_forward`.
+    var icon_navigation_forward: RswiftResources.ImageResource { .init(name: "icon_navigation_forward", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_github`.
+    var icon_navigation_github: RswiftResources.ImageResource { .init(name: "icon_navigation_github", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_history`.
+    var icon_navigation_history: RswiftResources.ImageResource { .init(name: "icon_navigation_history", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_language`.
+    var icon_navigation_language: RswiftResources.ImageResource { .init(name: "icon_navigation_language", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_refresh`.
+    var icon_navigation_refresh: RswiftResources.ImageResource { .init(name: "icon_navigation_refresh", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_stop`.
+    var icon_navigation_stop: RswiftResources.ImageResource { .init(name: "icon_navigation_stop", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_theme`.
+    var icon_navigation_theme: RswiftResources.ImageResource { .init(name: "icon_navigation_theme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_navigation_web`.
+    var icon_navigation_web: RswiftResources.ImageResource { .init(name: "icon_navigation_web", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_tabbar_activity`.
+    var icon_tabbar_activity: RswiftResources.ImageResource { .init(name: "icon_tabbar_activity", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_tabbar_login`.
+    var icon_tabbar_login: RswiftResources.ImageResource { .init(name: "icon_tabbar_login", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_tabbar_news`.
+    var icon_tabbar_news: RswiftResources.ImageResource { .init(name: "icon_tabbar_news", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_tabbar_profile`.
+    var icon_tabbar_profile: RswiftResources.ImageResource { .init(name: "icon_tabbar_profile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_tabbar_search`.
+    var icon_tabbar_search: RswiftResources.ImageResource { .init(name: "icon_tabbar_search", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_tabbar_settings`.
+    var icon_tabbar_settings: RswiftResources.ImageResource { .init(name: "icon_tabbar_settings", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_toast_error`.
+    var icon_toast_error: RswiftResources.ImageResource { .init(name: "icon_toast_error", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_toast_success`.
+    var icon_toast_success: RswiftResources.ImageResource { .init(name: "icon_toast_success", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_toast_warning`.
+    var icon_toast_warning: RswiftResources.ImageResource { .init(name: "icon_toast_warning", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_whatsnew_cloc`.
+    var icon_whatsnew_cloc: RswiftResources.ImageResource { .init(name: "icon_whatsnew_cloc", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_whatsnew_github`.
+    var icon_whatsnew_github: RswiftResources.ImageResource { .init(name: "icon_whatsnew_github", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_whatsnew_theme`.
+    var icon_whatsnew_theme: RswiftResources.ImageResource { .init(name: "icon_whatsnew_theme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_whatsnew_trending`.
+    var icon_whatsnew_trending: RswiftResources.ImageResource { .init(name: "icon_whatsnew_trending", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `image_no_result`.
+    var image_no_result: RswiftResources.ImageResource { .init(name: "image_no_result", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `launch_image`.
+    var launch_image: RswiftResources.ImageResource { .init(name: "launch_image", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -86,13 +832,5 @@ struct _R {
         }
       }
     }
-  }
-
-  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
-  struct file {
-    let bundle: Foundation.Bundle
-
-    /// Resource file `Localizable.xcstrings`.
-    var localizableXcstrings: RswiftResources.FileResource { .init(name: "Localizable", pathExtension: "xcstrings", bundle: bundle, locale: LocaleReference.none) }
   }
 }
