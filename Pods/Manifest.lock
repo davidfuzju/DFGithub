@@ -1,9 +1,6 @@
 PODS:
   - Alamofire (5.10.2)
   - BonMot (6.1.3)
-  - CocoaLumberjack/Core (3.8.5)
-  - CocoaLumberjack/Swift (3.8.5):
-    - CocoaLumberjack/Core
   - Differentiator (5.0.0)
   - DropDown (2.3.13)
   - DZNEmptyDataSet (1.8.1)
@@ -180,7 +177,6 @@ PODS:
 
 DEPENDENCIES:
   - BonMot (~> 6.0)
-  - CocoaLumberjack/Swift (~> 3.0)
   - DropDown (~> 2.0)
   - DZNEmptyDataSet
   - HMSegmentedControl (~> 1.0)
@@ -211,7 +207,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BonMot
-    - CocoaLumberjack
     - Differentiator
     - DropDown
     - DZNEmptyDataSet
@@ -266,7 +261,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   BonMot: 1534503509ef48d3c4d0fbec2d0ea35f2887b4ea
-  CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -304,6 +298,6 @@ SPEC CHECKSUMS:
   SwifterSwift: e9caf990fc72e835432280755d1f4c43f2a483d5
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: ee80311d074e42f2def3e053a44fad78a331156b
+PODFILE CHECKSUM: 31f370fed6c64618d4b26c15f42c40aa3b0d394c
 
 COCOAPODS: 1.16.2

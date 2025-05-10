@@ -60,9 +60,6 @@ target 'DFGithub' do
   
   pod 'Localize-Swift', '~> 3.2'
   
-  # Logging
-  pod 'CocoaLumberjack/Swift', '~> 3.0'
-  
   # Debug
   pod 'LookinServer', :subspecs => ['Swift'], :configurations => ['Debug']
   
