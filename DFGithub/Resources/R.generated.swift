@@ -5,6 +5,7 @@
 
 import Foundation
 import RswiftResources
+import UIKit
 
 private class BundleFinder {}
 let R = _R(bundle: Bundle(for: BundleFinder.self))
@@ -15,6 +16,7 @@ struct _R {
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var storyboard: storyboard { .init(bundle: bundle) }
 
   func string(bundle: Foundation.Bundle) -> string {
     .init(bundle: bundle, preferredLanguages: nil, locale: nil)
@@ -34,8 +36,11 @@ struct _R {
   func info(bundle: Foundation.Bundle) -> info {
     .init(bundle: bundle)
   }
+  func storyboard(bundle: Foundation.Bundle) -> storyboard {
+    .init(bundle: bundle)
+  }
   func validate() throws {
-
+    try self.storyboard.validate()
   }
 
   struct project {
@@ -830,6 +835,32 @@ struct _R {
             var uiSceneDelegateClassName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate" }
           }
         }
+      }
+    }
+  }
+
+  /// This `_R.storyboard` struct is generated, and contains static references to 1 storyboards.
+  struct storyboard {
+    let bundle: Foundation.Bundle
+    var launchScreen: launchScreen { .init(bundle: bundle) }
+
+    func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
+      .init(bundle: bundle)
+    }
+    func validate() throws {
+      try self.launchScreen.validate()
+    }
+
+
+    /// Storyboard `Launch Screen`.
+    struct launchScreen: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
+      typealias InitialController = UIKit.UIViewController
+
+      let bundle: Foundation.Bundle
+
+      let name = "Launch Screen"
+      func validate() throws {
+
       }
     }
   }
