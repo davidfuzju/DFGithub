@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CocoaLumberjack
 import RxSwift
 
 public func logDebug(_ message: @autoclosure () -> String) {}
