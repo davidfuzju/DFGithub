@@ -44,6 +44,7 @@ target 'DFGithub' do
   pod 'IQKeyboardManagerSwift', '~> 8.0'
   
   # UIKit
+  pod 'SVProgressHUD', '~> 2.0'
   pod 'DZNEmptyDataSet'
   pod "MBProgressHUD"
   pod "KafkaRefresh"

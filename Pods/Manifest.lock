@@ -141,6 +141,9 @@ PODS:
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
   - SnapKit (5.7.1)
+  - SVProgressHUD (2.3.1):
+    - SVProgressHUD/Core (= 2.3.1)
+  - SVProgressHUD/Core (2.3.1)
   - SwiftDate (7.0.0)
   - SwiftEntryKit (2.0.0)
   - SwifterSwift (7.0.0):
@@ -200,6 +203,7 @@ DEPENDENCIES:
   - RxTheme (~> 6.0)
   - RxViewController (~> 2.0)
   - SnapKit (~> 5.0)
+  - SVProgressHUD (~> 2.0)
   - SwiftDate (~> 7.0)
   - SwiftEntryKit (from `https://github.com/davidfuzju/SwiftEntryKit.git`, branch `master`)
   - SwifterSwift
@@ -240,6 +244,7 @@ SPEC REPOS:
     - RxTheme
     - RxViewController
     - SnapKit
+    - SVProgressHUD
     - SwiftDate
     - SwifterSwift
     - Toast-Swift
@@ -302,11 +307,12 @@ SPEC CHECKSUMS:
   RxTheme: be60cb14e0544b3cbd574cc37fed35ba9d61aa1f
   RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
   SwiftDate: bbc26e26fc8c0c33fbee8c140c5e8a68293a148a
   SwiftEntryKit: 3bd87ad5b12869ea9369fa0fa7083816a09329e3
   SwifterSwift: e9caf990fc72e835432280755d1f4c43f2a483d5
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: 232d033af3cbe569fd7d65261c1206435d777d42
+PODFILE CHECKSUM: 09a74928c881dbb5c339cb7f48d325a36605dcc9
 
 COCOAPODS: 1.16.2
