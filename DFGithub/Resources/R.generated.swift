@@ -16,6 +16,7 @@ struct _R {
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var entitlements: entitlements { .init() }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func string(bundle: Foundation.Bundle) -> string {
@@ -772,6 +773,14 @@ struct _R {
           }
         }
       }
+    }
+  }
+
+  /// This `_R.entitlements` struct is generated, and contains static references to 1 properties.
+  struct entitlements {
+    let comAppleDeveloperAssociatedDomains = comAppleDeveloperAssociatedDomains()
+    struct comAppleDeveloperAssociatedDomains {
+      let applinksOiaPixelplanettechCom: String = "applinks:oia.pixelplanettech.com"
     }
   }
 
