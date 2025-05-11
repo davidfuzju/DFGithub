@@ -14,13 +14,13 @@ enum Keys {
 
     var apiKey: String {
         switch self {
-        case .github: return "5a39979251c0452a9476bd45c82a14d8e98c3fb3"
+        case .github: return "57823ac56c3e72707243b1574f7bbfb0420133fd"
         }
     }
 
     var appId: String {
         switch self {
-        case .github: return "00cbdbffb01ec72e280a"
+        case .github: return "Ov23liaUcNLhCEhzwaAF"
         }
     }
 }
@@ -28,7 +28,7 @@ enum Keys {
 struct Configs {
 
     struct App {
-        static let githubScope = "user+repo+notifications+read:org"
+        static let githubScope = "user+repo+read:org"
         static let bundleIdentifier = "com.davidfu.DFGithub"
     }
 
