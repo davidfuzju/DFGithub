@@ -7,4 +7,4 @@
 */
 
 NSFaceIDUsageDescription = "We need to use Face ID to verify your identity";
-CFBundleDisplayName = "DFUHub";
+CFBundleDisplayName = "DFGithub";

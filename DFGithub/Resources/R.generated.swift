@@ -17,6 +17,7 @@ struct _R {
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
   var entitlements: entitlements { .init() }
+  var file: file { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func string(bundle: Foundation.Bundle) -> string {
@@ -35,6 +36,9 @@ struct _R {
     .init(bundle: bundle)
   }
   func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func storyboard(bundle: Foundation.Bundle) -> storyboard {
@@ -594,7 +598,7 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 43 images.
+  /// This `_R.image` struct is generated, and contains static references to 44 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -726,6 +730,9 @@ struct _R {
 
     /// Image `launch_image`.
     var launch_image: RswiftResources.ImageResource { .init(name: "launch_image", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `original`.
+    var original: RswiftResources.ImageResource { .init(name: "original", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -784,6 +791,14 @@ struct _R {
     }
   }
 
+  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `original.png`.
+    var originalPng: RswiftResources.FileResource { .init(name: "original", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
+  }
+
   /// This `_R.storyboard` struct is generated, and contains static references to 1 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
@@ -805,7 +820,7 @@ struct _R {
 
       let name = "Launch Screen"
       func validate() throws {
-
+        if UIKit.UIImage(named: "original.png", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'original.png' is used in storyboard 'Launch Screen', but couldn't be loaded.") }
       }
     }
   }
