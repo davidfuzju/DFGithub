@@ -12,18 +12,25 @@ import RxSwift
 import Kingfisher
 
 extension Reactive where Base: UIImageView {
-
     public var imageURL: Binder<URL?> {
-        return self.imageURL(withPlaceholder: nil)
+        return self.imageURL()
     }
-
-    public func imageURL(withPlaceholder placeholderImage: UIImage?, options: KingfisherOptionsInfo? = []) -> Binder<URL?> {
-        return Binder(self.base, binding: { (imageView, url) in
-            imageView.kf.setImage(with: url,
+    
+    public func imageURL(withPlaceholder placeholderImage: UIImage? = nil,
+                         tintColor: UIColor? = nil,
+                         renderingMode: UIImage.RenderingMode = .automatic,
+                         transition: ImageTransition = .fade(0.4),
+                         forceTransition: Bool = false,
+                         loadDiskFileSynchronously: Bool = false) -> Binder<URL?> {
+        return Binder(self.base, binding: { imageView, url in
+            imageView.df_setImage(with: url,
                                   placeholder: placeholderImage,
-                                  options: options,
-                                  progressBlock: nil,
-                                  completionHandler: { (result) in })
+                                  tintColor: tintColor,
+                                  renderingMode: renderingMode,
+                                  transition: transition,
+                                  forceTransition: forceTransition,
+                                  loadDiskFileSynchronously: loadDiskFileSynchronously,
+                                  completion: nil)
         })
     }
 }
