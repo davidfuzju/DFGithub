@@ -60,14 +60,15 @@ class SecurityGuardViewController: ViewController {
         super.bindViewModel()
         guard let viewModel = viewModel as? SecurityGuardViewModel else { return }
         
-        let input = SecurityGuardViewModel.Input(trigger: Observable.just(()),
+        /// 初次进入要故意延迟一下时间，这样才能让 SecurtyGuard 有足够时间完成动画
+        let input = SecurityGuardViewModel.Input(trigger: Observable.just(()).delay(.milliseconds(500), scheduler: MainScheduler.instance),
                                                    authenticateButtonClick: retryButton.rx.tap.throttleForUI().mapToVoid())
         let output = viewModel.transform(input: input)
         
         output.didAuthenticate
             .drive(onNext: { [weak self] e in
                 guard let self = self else { return }
-                if e {
+                if e == true {
                     // success
                     self.entryPresenting?.dismiss(.displayed, with: nil)
                 } else {

@@ -72,12 +72,12 @@ struct _R {
     struct infoPlist {
       let source: RswiftResources.StringResource.Source
 
-      /// en translation: DFUHub
+      /// en translation: DFGithub
       ///
       /// Key: CFBundleDisplayName
       ///
       /// Locales: en, zh-Hans
-      var cfBundleDisplayName: RswiftResources.StringResource { .init(key: "CFBundleDisplayName", tableName: "InfoPlist", source: source, developmentValue: "DFUHub", comment: nil) }
+      var cfBundleDisplayName: RswiftResources.StringResource { .init(key: "CFBundleDisplayName", tableName: "InfoPlist", source: source, developmentValue: "DFGithub", comment: nil) }
 
       /// en translation: We need to use Face ID to verify your identity
       ///

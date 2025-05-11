@@ -48,6 +48,9 @@ class AuthManager: NSObject {
         
         /// 应用在进入前台时开始弹出 Security Overlay 毛玻璃遮罩
         NotificationCenter.default.rx.notification(UIApplication.willEnterForegroundNotification)
+            /// 生物识别成功一次后，识别状态会存在大概 5s ~ 1min 左右，这里做一个时间窗口的过滤，避免 SecurityGaurd 多次弹出
+            /// TODO: davidfu 因为是 demo，所以这里做简单处理
+            .throttle(.seconds(10), latest: false, scheduler: MainScheduler.instance)
             /// 设置延迟，以便首页动画展开
             .delay(.milliseconds(500), scheduler: MainScheduler.instance)
             .withUnretained(self)

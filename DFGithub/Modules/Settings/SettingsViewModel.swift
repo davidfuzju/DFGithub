@@ -67,6 +67,7 @@ class SettingsViewModel: ViewModel, ViewModelType {
                                                                     isEnabled: nightModeEnabled)
             nightModeCellViewModel.switchChanged.skip(1).bind(to: self.nightModeEnabled).disposed(by: self.cellDisposeBag)
             
+            
             let biometryEnabled = AuthManager.shared.biometryEnabled.value
             let biometryCellViewModel = SettingSwitchCellViewModel(with: R.string.localizable.settingsBiometryTitle.key.localized(),
                                                                    detail: nil,
@@ -79,13 +80,22 @@ class SettingsViewModel: ViewModel, ViewModelType {
                                                              image: R.image.icon_cell_language()?.template,
                                                              hidesDisclosure: false)
             
-            items += [
-                SettingsSection.setting(title: R.string.localizable.settingsPreferencesSectionTitle.key.localized(), items: [
-                    SettingsSectionItem.nightModeItem(viewModel: nightModeCellViewModel),
-                    SettingsSectionItem.biometryItem(viewModel: biometryCellViewModel),
-                    SettingsSectionItem.languageItem(viewModel: languageCellViewModel)
-                ]),
-            ]
+            if loggedIn.value {
+                items += [
+                    SettingsSection.setting(title: R.string.localizable.settingsPreferencesSectionTitle.key.localized(), items: [
+                        SettingsSectionItem.nightModeItem(viewModel: nightModeCellViewModel),
+                        SettingsSectionItem.biometryItem(viewModel: biometryCellViewModel),
+                        SettingsSectionItem.languageItem(viewModel: languageCellViewModel)
+                    ]),
+                ]
+            } else {
+                items += [
+                    SettingsSection.setting(title: R.string.localizable.settingsPreferencesSectionTitle.key.localized(), items: [
+                        SettingsSectionItem.nightModeItem(viewModel: nightModeCellViewModel),
+                        SettingsSectionItem.languageItem(viewModel: languageCellViewModel)
+                    ]),
+                ]
+            }
             
             return items
         }
