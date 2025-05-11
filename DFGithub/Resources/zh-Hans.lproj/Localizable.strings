@@ -30,8 +30,6 @@
 "Initial.NoResults" = "欢迎使用 DFGithub！";
 
 /* Login */
-"Login.BasicSegment.Title" = "基础登录";
-"Login.PersonalSegment.Title" = "个人令牌";
 "Login.OAuthSegment.Title" = "OAuth登录";
 "Login.TitleLabel.Text" = "欢迎使用 DFGithub";
 "Login.DetailLabel.Text" = "使用OAuth的API请求，每小时最多可以发送5000个请求。\n\n对于未认证的请求，速率限制允许每小时最多60个请求。";
@@ -72,6 +70,7 @@
 "Settings.AccountSection.Title" = "账户";
 "Settings.PreferencesSection.Title" = "偏好设置";
 "Settings.NightMode.Title" = "夜间模式";
+"Settings.Biometry.Title" = "生物识别";
 "Settings.Language.Title" = "语言";
 "Settings.LogOut.Title" = "退出登录";
 "Settings.Logout.Alert.Message" = "确定要退出 DFGithub 吗？";
@@ -91,3 +90,9 @@
 "User.CompanyCell.Title" = "公司";
 "User.BlogCell.Title" = "博客";
 "User.ProfileSummaryCell.Title" = "个人简介";
+
+/* Biometry */
+"Biometry.Title" = "需要身份验证以继续使用";
+"Biometry.Button.Title" = "点击验证";
+"Biometry.Authenticate.Reason" = "验证身份以继续使用应用";
+"Biometry.Error.descripton" = "设备不支持 Face ID/Touch ID";

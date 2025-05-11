@@ -11,13 +11,11 @@ import RxCocoa
 import SafariServices
 
 enum LoginSegments: Int {
-    case oAuth, personal, basic
+    case oAuth
 
     var title: String {
         switch self {
         case .oAuth: return R.string.localizable.loginOAuthSegmentTitle.key.localized()
-        case .personal: return R.string.localizable.loginPersonalSegmentTitle.key.localized()
-        case .basic: return R.string.localizable.loginBasicSegmentTitle.key.localized()
         }
     }
 }

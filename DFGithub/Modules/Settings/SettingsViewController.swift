@@ -46,7 +46,8 @@ class SettingsViewController: TableViewController {
                     let cell = tableView.dequeueReusableCell(withClass: UserCell.self, for: indexPath)
                     cell.bind(to: viewModel)
                     return cell
-                case .nightModeItem(let viewModel):
+                case .nightModeItem(let viewModel),
+                        .biometryItem(let viewModel):
                     let cell = tableView.dequeueReusableCell(withClass: SettingSwitchCell.self, for: indexPath)
                     cell.bind(to: viewModel)
                     return cell
@@ -76,7 +77,7 @@ class SettingsViewController: TableViewController {
             case .logoutItem:
                 self.deselectSelectedRow()
                 self.logoutAction()
-            case .nightModeItem:
+            case .nightModeItem, .biometryItem:
                 self.deselectSelectedRow()
             case .languageItem:
                 if let viewModel = viewModel.viewModel(for: item) as? LanguageViewModel {

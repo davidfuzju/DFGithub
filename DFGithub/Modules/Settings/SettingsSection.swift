@@ -19,6 +19,7 @@ enum SettingsSectionItem {
 
     // Preferences
     case nightModeItem(viewModel: SettingSwitchCellViewModel)
+    case biometryItem(viewModel: SettingSwitchCellViewModel)
     case languageItem(viewModel: SettingCellViewModel)
 }
 
@@ -27,7 +28,9 @@ extension SettingsSectionItem: IdentifiableType {
     var identity: Identity {
         switch self {
         case .profileItem(let viewModel): return viewModel.user.login ?? ""
-        case .nightModeItem(let viewModel): return viewModel.title.value ?? ""
+        case .nightModeItem(let viewModel),
+                .biometryItem(let viewModel):
+            return viewModel.title.value ?? ""
         case .logoutItem(let viewModel),
                 .languageItem(let viewModel):
             return viewModel.title.value ?? ""

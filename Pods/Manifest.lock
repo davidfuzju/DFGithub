@@ -142,6 +142,7 @@ PODS:
     - RxSwift (~> 6.0)
   - SnapKit (5.7.1)
   - SwiftDate (7.0.0)
+  - SwiftEntryKit (2.0.0)
   - SwifterSwift (7.0.0):
     - SwifterSwift/AppKit (= 7.0.0)
     - SwifterSwift/CoreAnimation (= 7.0.0)
@@ -200,6 +201,7 @@ DEPENDENCIES:
   - RxViewController (~> 2.0)
   - SnapKit (~> 5.0)
   - SwiftDate (~> 7.0)
+  - SwiftEntryKit (from `https://github.com/davidfuzju/SwiftEntryKit.git`, branch `master`)
   - SwifterSwift
   - Toast-Swift (~> 5.0)
 
@@ -249,6 +251,9 @@ EXTERNAL SOURCES:
   ObjectMapper:
     :branch: master
     :git: https://github.com/tristanhimmelman/ObjectMapper.git
+  SwiftEntryKit:
+    :branch: master
+    :git: https://github.com/davidfuzju/SwiftEntryKit.git
 
 CHECKOUT OPTIONS:
   Moya-ObjectMapper:
@@ -257,6 +262,9 @@ CHECKOUT OPTIONS:
   ObjectMapper:
     :commit: 6021c6035e83a306047348666f6400dc61445d3b
     :git: https://github.com/tristanhimmelman/ObjectMapper.git
+  SwiftEntryKit:
+    :commit: 48bd4ca3d0fc98dfbd77a38523a94ac5692ff117
+    :git: https://github.com/davidfuzju/SwiftEntryKit.git
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
@@ -295,9 +303,10 @@ SPEC CHECKSUMS:
   RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftDate: bbc26e26fc8c0c33fbee8c140c5e8a68293a148a
+  SwiftEntryKit: 3bd87ad5b12869ea9369fa0fa7083816a09329e3
   SwifterSwift: e9caf990fc72e835432280755d1f4c43f2a483d5
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: 31f370fed6c64618d4b26c15f42c40aa3b0d394c
+PODFILE CHECKSUM: 232d033af3cbe569fd7d65261c1206435d777d42
 
 COCOAPODS: 1.16.2

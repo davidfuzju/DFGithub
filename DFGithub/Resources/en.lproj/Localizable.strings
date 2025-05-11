@@ -30,8 +30,6 @@
 "Initial.NoResults" = "Welcome to DFGithub!";
 
 /* Login */
-"Login.BasicSegment.Title" = "Basic";
-"Login.PersonalSegment.Title" = "Personal";
 "Login.OAuthSegment.Title" = "OAuth";
 "Login.TitleLabel.Text" = "Welcome to DFGithub";
 "Login.DetailLabel.Text" = "For API requests using OAuth, you can make up to 5000 requests per hour. \n\nFor unauthenticated requests, the rate limit allows for up to 60 requests per hour.";
@@ -72,6 +70,7 @@
 "Settings.AccountSection.Title" = "Account";
 "Settings.PreferencesSection.Title" = "Preferences";
 "Settings.NightMode.Title" = "Night mode";
+"Settings.Biometry.Title" = "Biometry";
 "Settings.Language.Title" = "Language";
 "Settings.LogOut.Title" = "Log Out";
 "Settings.Logout.Alert.Message" = "Are you sure want to log out from DFGithub?";
@@ -91,3 +90,9 @@
 "User.CompanyCell.Title" = "Company";
 "User.BlogCell.Title" = "Blog";
 "User.ProfileSummaryCell.Title" = "Profile Summary";
+
+/* Biometry */
+"Biometry.Title" = "Authentication Required to Continue";
+"Biometry.Button.Title" = "Tap to Authenticate";
+"Biometry.Authenticate.Reason" = "Verify your identity to continue using the app";
+"Biometry.Error.descripton" = "Face ID / Touch ID is not supported on this device";

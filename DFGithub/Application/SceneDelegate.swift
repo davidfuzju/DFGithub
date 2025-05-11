@@ -11,7 +11,7 @@ import Toast_Swift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+    var window: Window?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Show initial screen
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
+        let window = Window(windowScene: windowScene)
         Application.shared.presentInitialScreen(in: window)
         window.makeKeyAndVisible()
     }

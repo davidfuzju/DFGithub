@@ -471,6 +471,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6NM8G5CU6A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DFGithub/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -506,6 +507,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6NM8G5CU6A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DFGithub/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

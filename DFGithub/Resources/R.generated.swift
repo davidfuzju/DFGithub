@@ -47,21 +47,72 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `_R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
     let bundle: Foundation.Bundle
     let preferredLanguages: [String]?
     let locale: Locale?
+    var infoPlist: infoPlist { .init(source: .init(bundle: bundle, tableName: "InfoPlist", preferredLanguages: preferredLanguages, locale: locale)) }
     var localizable: localizable { .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale)) }
 
+    func infoPlist(preferredLanguages: [String]) -> infoPlist {
+      .init(source: .init(bundle: bundle, tableName: "InfoPlist", preferredLanguages: preferredLanguages, locale: locale))
+    }
     func localizable(preferredLanguages: [String]) -> localizable {
       .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale))
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 68 localization keys.
+    /// This `_R.string.infoPlist` struct is generated, and contains static references to 2 localization keys.
+    struct infoPlist {
+      let source: RswiftResources.StringResource.Source
+
+      /// en translation: DFUHub
+      ///
+      /// Key: CFBundleDisplayName
+      ///
+      /// Locales: en, zh-Hans
+      var cfBundleDisplayName: RswiftResources.StringResource { .init(key: "CFBundleDisplayName", tableName: "InfoPlist", source: source, developmentValue: "DFUHub", comment: nil) }
+
+      /// en translation: We need to use Face ID to verify your identity
+      ///
+      /// Key: NSFaceIDUsageDescription
+      ///
+      /// Locales: en, zh-Hans
+      var nsFaceIDUsageDescription: RswiftResources.StringResource { .init(key: "NSFaceIDUsageDescription", tableName: "InfoPlist", source: source, developmentValue: "We need to use Face ID to verify your identity", comment: nil) }
+    }
+
+    /// This `_R.string.localizable` struct is generated, and contains static references to 71 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
+
+      /// en translation: Verify your identity to continue using the app
+      ///
+      /// Key: Biometry.Authenticate.Reason
+      ///
+      /// Locales: en, zh-Hans
+      var biometryAuthenticateReason: RswiftResources.StringResource { .init(key: "Biometry.Authenticate.Reason", tableName: "Localizable", source: source, developmentValue: "Verify your identity to continue using the app", comment: nil) }
+
+      /// en translation: Tap to Authenticate
+      ///
+      /// Key: Biometry.Button.Title
+      ///
+      /// Locales: en, zh-Hans
+      var biometryButtonTitle: RswiftResources.StringResource { .init(key: "Biometry.Button.Title", tableName: "Localizable", source: source, developmentValue: "Tap to Authenticate", comment: nil) }
+
+      /// en translation: Face ID / Touch ID is not supported on this device
+      ///
+      /// Key: Biometry.Error.descripton
+      ///
+      /// Locales: en, zh-Hans
+      var biometryErrorDescripton: RswiftResources.StringResource { .init(key: "Biometry.Error.descripton", tableName: "Localizable", source: source, developmentValue: "Face ID / Touch ID is not supported on this device", comment: nil) }
+
+      /// en translation: Authentication Required to Continue
+      ///
+      /// Key: Biometry.Title
+      ///
+      /// Locales: en, zh-Hans
+      var biometryTitle: RswiftResources.StringResource { .init(key: "Biometry.Title", tableName: "Localizable", source: source, developmentValue: "Authentication Required to Continue", comment: nil) }
 
       /// en translation: Back
       ///
@@ -161,13 +212,6 @@ struct _R {
       /// Locales: en, zh-Hans
       var languageNavigationTitle: RswiftResources.StringResource { .init(key: "Language.Navigation.Title", tableName: "Localizable", source: source, developmentValue: "Language", comment: nil) }
 
-      /// en translation: Basic
-      ///
-      /// Key: Login.BasicSegment.Title
-      ///
-      /// Locales: en, zh-Hans
-      var loginBasicSegmentTitle: RswiftResources.StringResource { .init(key: "Login.BasicSegment.Title", tableName: "Localizable", source: source, developmentValue: "Basic", comment: nil) }
-
       /// en translation: For API requests using OAuth, you can make up to 5000 requests per hour.   For unauthenticated requests, the rate limit allows for up to 60 requests per hour.
       ///
       /// Key: Login.DetailLabel.Text
@@ -188,13 +232,6 @@ struct _R {
       ///
       /// Locales: en, zh-Hans
       var loginOAuthloginButtonTitle: RswiftResources.StringResource { .init(key: "Login.OAuthloginButton.Title", tableName: "Localizable", source: source, developmentValue: "Sign in with Github", comment: nil) }
-
-      /// en translation: Personal
-      ///
-      /// Key: Login.PersonalSegment.Title
-      ///
-      /// Locales: en, zh-Hans
-      var loginPersonalSegmentTitle: RswiftResources.StringResource { .init(key: "Login.PersonalSegment.Title", tableName: "Localizable", source: source, developmentValue: "Personal", comment: nil) }
 
       /// en translation: Welcome to DFGithub
       ///
@@ -406,6 +443,13 @@ struct _R {
       /// Locales: en, zh-Hans
       var settingsAccountSectionTitle: RswiftResources.StringResource { .init(key: "Settings.AccountSection.Title", tableName: "Localizable", source: source, developmentValue: "Account", comment: nil) }
 
+      /// en translation: Biometry
+      ///
+      /// Key: Settings.Biometry.Title
+      ///
+      /// Locales: en, zh-Hans
+      var settingsBiometryTitle: RswiftResources.StringResource { .init(key: "Settings.Biometry.Title", tableName: "Localizable", source: source, developmentValue: "Biometry", comment: nil) }
+
       /// en translation: Language
       ///
       /// Key: Settings.Language.Title
@@ -549,7 +593,7 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 79 images.
+  /// This `_R.image` struct is generated, and contains static references to 43 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -568,32 +612,8 @@ struct _R {
     /// Image `icon_button_user_x`.
     var icon_button_user_x: RswiftResources.ImageResource { .init(name: "icon_button_user_x", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `icon_cell_acknowledgements`.
-    var icon_cell_acknowledgements: RswiftResources.ImageResource { .init(name: "icon_cell_acknowledgements", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_branch`.
-    var icon_cell_badge_branch: RswiftResources.ImageResource { .init(name: "icon_cell_badge_branch", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `icon_cell_badge_collaborator`.
     var icon_cell_badge_collaborator: RswiftResources.ImageResource { .init(name: "icon_cell_badge_collaborator", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_comment`.
-    var icon_cell_badge_comment: RswiftResources.ImageResource { .init(name: "icon_cell_badge_comment", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_commit`.
-    var icon_cell_badge_commit: RswiftResources.ImageResource { .init(name: "icon_cell_badge_commit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_fork`.
-    var icon_cell_badge_fork: RswiftResources.ImageResource { .init(name: "icon_cell_badge_fork", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_issue`.
-    var icon_cell_badge_issue: RswiftResources.ImageResource { .init(name: "icon_cell_badge_issue", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_pull_request`.
-    var icon_cell_badge_pull_request: RswiftResources.ImageResource { .init(name: "icon_cell_badge_pull_request", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_badge_push`.
-    var icon_cell_badge_push: RswiftResources.ImageResource { .init(name: "icon_cell_badge_push", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_cell_badge_repository`.
     var icon_cell_badge_repository: RswiftResources.ImageResource { .init(name: "icon_cell_badge_repository", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -604,9 +624,6 @@ struct _R {
     /// Image `icon_cell_badge_star`.
     var icon_cell_badge_star: RswiftResources.ImageResource { .init(name: "icon_cell_badge_star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `icon_cell_badge_tag`.
-    var icon_cell_badge_tag: RswiftResources.ImageResource { .init(name: "icon_cell_badge_tag", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `icon_cell_badge_trending`.
     var icon_cell_badge_trending: RswiftResources.ImageResource { .init(name: "icon_cell_badge_trending", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
@@ -616,14 +633,8 @@ struct _R {
     /// Image `icon_cell_check`.
     var icon_cell_check: RswiftResources.ImageResource { .init(name: "icon_cell_check", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `icon_cell_cloc`.
-    var icon_cell_cloc: RswiftResources.ImageResource { .init(name: "icon_cell_cloc", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `icon_cell_company`.
     var icon_cell_company: RswiftResources.ImageResource { .init(name: "icon_cell_company", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_contact_no_image`.
-    var icon_cell_contact_no_image: RswiftResources.ImageResource { .init(name: "icon_cell_contact_no_image", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_cell_created`.
     var icon_cell_created: RswiftResources.ImageResource { .init(name: "icon_cell_created", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -633,36 +644,6 @@ struct _R {
 
     /// Image `icon_cell_disclosure`.
     var icon_cell_disclosure: RswiftResources.ImageResource { .init(name: "icon_cell_disclosure", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_events`.
-    var icon_cell_events: RswiftResources.ImageResource { .init(name: "icon_cell_events", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_file`.
-    var icon_cell_file: RswiftResources.ImageResource { .init(name: "icon_cell_file", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_frown`.
-    var icon_cell_frown: RswiftResources.ImageResource { .init(name: "icon_cell_frown", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_git_branch`.
-    var icon_cell_git_branch: RswiftResources.ImageResource { .init(name: "icon_cell_git_branch", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_git_commit`.
-    var icon_cell_git_commit: RswiftResources.ImageResource { .init(name: "icon_cell_git_commit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_git_fork`.
-    var icon_cell_git_fork: RswiftResources.ImageResource { .init(name: "icon_cell_git_fork", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_git_language`.
-    var icon_cell_git_language: RswiftResources.ImageResource { .init(name: "icon_cell_git_language", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_git_merge`.
-    var icon_cell_git_merge: RswiftResources.ImageResource { .init(name: "icon_cell_git_merge", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_git_pull_request`.
-    var icon_cell_git_pull_request: RswiftResources.ImageResource { .init(name: "icon_cell_git_pull_request", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_issues`.
-    var icon_cell_issues: RswiftResources.ImageResource { .init(name: "icon_cell_issues", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_cell_language`.
     var icon_cell_language: RswiftResources.ImageResource { .init(name: "icon_cell_language", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -679,41 +660,14 @@ struct _R {
     /// Image `icon_cell_profile_summary`.
     var icon_cell_profile_summary: RswiftResources.ImageResource { .init(name: "icon_cell_profile_summary", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `icon_cell_readme`.
-    var icon_cell_readme: RswiftResources.ImageResource { .init(name: "icon_cell_readme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_releases`.
-    var icon_cell_releases: RswiftResources.ImageResource { .init(name: "icon_cell_releases", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_remove`.
-    var icon_cell_remove: RswiftResources.ImageResource { .init(name: "icon_cell_remove", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_size`.
-    var icon_cell_size: RswiftResources.ImageResource { .init(name: "icon_cell_size", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_smile`.
-    var icon_cell_smile: RswiftResources.ImageResource { .init(name: "icon_cell_smile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_source`.
-    var icon_cell_source: RswiftResources.ImageResource { .init(name: "icon_cell_source", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `icon_cell_star`.
     var icon_cell_star: RswiftResources.ImageResource { .init(name: "icon_cell_star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_stars_history`.
-    var icon_cell_stars_history: RswiftResources.ImageResource { .init(name: "icon_cell_stars_history", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_submodule`.
-    var icon_cell_submodule: RswiftResources.ImageResource { .init(name: "icon_cell_submodule", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_cell_theme`.
     var icon_cell_theme: RswiftResources.ImageResource { .init(name: "icon_cell_theme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_cell_updated`.
     var icon_cell_updated: RswiftResources.ImageResource { .init(name: "icon_cell_updated", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_cell_whats_new`.
-    var icon_cell_whats_new: RswiftResources.ImageResource { .init(name: "icon_cell_whats_new", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_navigation_back`.
     var icon_navigation_back: RswiftResources.ImageResource { .init(name: "icon_navigation_back", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -745,14 +699,8 @@ struct _R {
     /// Image `icon_navigation_web`.
     var icon_navigation_web: RswiftResources.ImageResource { .init(name: "icon_navigation_web", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `icon_tabbar_activity`.
-    var icon_tabbar_activity: RswiftResources.ImageResource { .init(name: "icon_tabbar_activity", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `icon_tabbar_login`.
     var icon_tabbar_login: RswiftResources.ImageResource { .init(name: "icon_tabbar_login", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_tabbar_news`.
-    var icon_tabbar_news: RswiftResources.ImageResource { .init(name: "icon_tabbar_news", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_tabbar_profile`.
     var icon_tabbar_profile: RswiftResources.ImageResource { .init(name: "icon_tabbar_profile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -771,18 +719,6 @@ struct _R {
 
     /// Image `icon_toast_warning`.
     var icon_toast_warning: RswiftResources.ImageResource { .init(name: "icon_toast_warning", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_whatsnew_cloc`.
-    var icon_whatsnew_cloc: RswiftResources.ImageResource { .init(name: "icon_whatsnew_cloc", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_whatsnew_github`.
-    var icon_whatsnew_github: RswiftResources.ImageResource { .init(name: "icon_whatsnew_github", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_whatsnew_theme`.
-    var icon_whatsnew_theme: RswiftResources.ImageResource { .init(name: "icon_whatsnew_theme", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `icon_whatsnew_trending`.
-    var icon_whatsnew_trending: RswiftResources.ImageResource { .init(name: "icon_whatsnew_trending", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `image_no_result`.
     var image_no_result: RswiftResources.ImageResource { .init(name: "image_no_result", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }

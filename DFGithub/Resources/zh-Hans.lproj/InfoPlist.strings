@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  DFGithub
+
+  Created by David FU on 2025/5/11.
+  
+*/
+
+NSFaceIDUsageDescription = "我们需要使用面容识别以验证您的身份";
+CFBundleDisplayName = "杜甫Hub";

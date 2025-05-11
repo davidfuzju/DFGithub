@@ -98,11 +98,6 @@ class LoginViewModel: ViewModel, ViewModelType {
 extension LoginViewModel: ASWebAuthenticationPresentationContextProviding {
     @available(iOS 13.0, *)
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return UIApplication
-            .shared
-            .connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .flatMap { $0.windows }
-            .last!
+        return Window.keyWindow!
     }
 }

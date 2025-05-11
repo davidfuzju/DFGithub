@@ -67,6 +67,13 @@ class SettingsViewModel: ViewModel, ViewModelType {
                                                                     isEnabled: nightModeEnabled)
             nightModeCellViewModel.switchChanged.skip(1).bind(to: self.nightModeEnabled).disposed(by: self.cellDisposeBag)
             
+            let biometryEnabled = AuthManager.shared.biometryEnabled.value
+            let biometryCellViewModel = SettingSwitchCellViewModel(with: R.string.localizable.settingsBiometryTitle.key.localized(),
+                                                                   detail: nil,
+                                                                   image: R.image.icon_tabbar_profile()?.template, hidesDisclosure: true,
+                                                                   isEnabled: biometryEnabled)
+            biometryCellViewModel.switchChanged.skip(1).bind(to: AuthManager.shared.biometryEnabled).disposed(by: self.cellDisposeBag)
+            
             let languageCellViewModel = SettingCellViewModel(with: R.string.localizable.settingsLanguageTitle.key.localized(),
                                                              detail: nil,
                                                              image: R.image.icon_cell_language()?.template,
@@ -75,6 +82,7 @@ class SettingsViewModel: ViewModel, ViewModelType {
             items += [
                 SettingsSection.setting(title: R.string.localizable.settingsPreferencesSectionTitle.key.localized(), items: [
                     SettingsSectionItem.nightModeItem(viewModel: nightModeCellViewModel),
+                    SettingsSectionItem.biometryItem(viewModel: biometryCellViewModel),
                     SettingsSectionItem.languageItem(viewModel: languageCellViewModel)
                 ]),
             ]

@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  DFGithub
+
+  Created by David FU on 2025/5/11.
+  
+*/
+
+NSFaceIDUsageDescription = "We need to use Face ID to verify your identity";
+CFBundleDisplayName = "DFUHub";

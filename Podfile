@@ -51,6 +51,7 @@ target 'DFGithub' do
   pod 'Toast-Swift', '~> 5.0'
   pod 'HMSegmentedControl', '~> 1.0'
   pod 'DropDown', '~> 2.0'
+  pod 'SwiftEntryKit', :git => 'https://github.com/davidfuzju/SwiftEntryKit.git', :branch => 'master'
   
   # Auto Layout
   pod 'SnapKit', '~> 5.0'

@@ -120,21 +120,21 @@ class UserViewModel: ViewModel, ViewModelType {
             // Repositories Count
             let repositoriesCountCellViewModel = UserDetailCellViewModel(with: R.string.localizable.userRepositoriesButtonTitle.key.localized(),
                                                                          detail: user.repositoriesCount?.string ?? "0",
-                                                                         image: R.image.icon_cell_created()?.template,
+                                                                         image: R.image.icon_cell_dir()?.template,
                                                                          hidesDisclosure: true)
             items.append(UserSectionItem.createdItem(viewModel: repositoriesCountCellViewModel))
             
             // Followers Count
             let followersCountCellViewModel = UserDetailCellViewModel(with: R.string.localizable.userFollowersButtonTitle.key.localized(),
                                                                       detail: user.followers?.string ?? "0",
-                                                                      image: R.image.icon_cell_created()?.template,
+                                                                      image: R.image.icon_button_user_plus()?.template,
                                                                       hidesDisclosure: true)
             items.append(UserSectionItem.createdItem(viewModel: followersCountCellViewModel))
             
             // Following Count
             let followingCountCellViewModel = UserDetailCellViewModel(with: R.string.localizable.userFollowingButtonTitle.key.localized(),
                                                                       detail: user.following?.string ?? "0",
-                                                                      image: R.image.icon_cell_created()?.template,
+                                                                      image: R.image.icon_button_user_x()?.template,
                                                                       hidesDisclosure: true)
             items.append(UserSectionItem.createdItem(viewModel: followingCountCellViewModel))
             
